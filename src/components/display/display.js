@@ -12,7 +12,8 @@ const display = () => {
                 <div className="col-lg-3">
                     <p>
                         <span className="xlg text-info">1</span>
-                        <i className="fab fa-btc fa-7x text-info" />
+                        <span><i className="fab fa-btc fa-7x text-info" /></span>
+                        <span><i className="fas fa-equals fa-5x text-info" /></span>
                     </p>
                 </div>
             
