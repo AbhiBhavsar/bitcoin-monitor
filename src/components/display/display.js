@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from "react-redux";
+import { fetchData, calculateChange } from '../../actions/actions';
 import PriceTable from '../priceTable/priceTable';
 import './display.scss';
 
@@ -23,4 +25,14 @@ const display = () => {
     );
 };
 
-export default display;
+// Will get the state data and associate actions here and pass them as a props to priceTable component
+const mapStateToProps = state => ({
+    ...state
+  });
+  
+  const mapDispatchToProps = dispatch => ({
+    fetchData: () => dispatch(fetchData),
+    calculateChange: () => dispatch(calculateChange)
+  });
+
+export default connect(mapStateToProps, mapDispatchToProps)(display);

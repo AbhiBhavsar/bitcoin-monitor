@@ -29,10 +29,11 @@ const priceTable = () => {
             </thead>
             <tbody>
                 <tr>
+                    {/* ===== will use map to render the rows =====  */}
                     <td>1</td>
                     <td>Mark</td>
                     <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>{ true ? <i className="fas fa-angle-double-up" /> : <i className="fas fa-fa-angle-double-down" /> }</td>
                 </tr>
             </tbody>
         </table>
