@@ -1,6 +1,6 @@
-# Minimal React Scaffold
+# Bitcoin Monitor
 
-Simple React Scafold with Babel, Redux, Webpack, Sass, & Bootstrap.
+Simple Bitcoin rate tracker app with Babel, Redux, Webpack, Sass, & Bootstrap.
 Also enabled with ES Lint.
 
 ## Getting Started
