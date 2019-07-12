@@ -14,7 +14,7 @@ module.exports = {
         filename: "bundle.[name].[hash:8].js",
         publicPath: "/"
     },
-
+    devtool: 'source-map',
     // context: require.path(__dirname, "/src")
 
     module: {
