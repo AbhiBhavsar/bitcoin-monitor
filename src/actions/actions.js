@@ -1,14 +1,15 @@
-import { FETCH_DATA, CALCULATE_CHANGE } from './actionTypes';
+import { PUT_DATA_IN_STORE, CALCULATE_CHANGE } from './actionTypes';
 
- export const fetchData = () => {
+ export const putDataInStore = (payload) => {
     return {
-        type: FETCH_DATA,
+        type: PUT_DATA_IN_STORE,
+        payload
     };
 };
 
-export const calculateChange = () => {
+export const calculateChange = (payload) => {
     return {
         type: CALCULATE_CHANGE,
-        payload: ''
+        payload
     };
 };

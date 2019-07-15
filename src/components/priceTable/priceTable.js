@@ -1,11 +1,12 @@
+/*eslint-disable */
 import React from 'react';
 
-
-const priceTable = () => {
+const priceTable = (props) => {
     const iconStyle = {
         transform: 'rotate(90deg)'
     };
     return (
+        
         <table className="table text-center">
             <thead className="thead-dark">
                 <tr> 
@@ -32,8 +33,8 @@ const priceTable = () => {
                     {/* ===== will use map to render the rows =====  */}
                     <td>1</td>
                     <td>Mark</td>
-                    <td>Otto</td>
-                    <td>{ true ? <i className="fas fa-angle-double-up" /> : <i className="fas fa-fa-angle-double-down" /> }</td>
+                    <td>0</td>
+                    <td>{ true ? <i className="fas fa-angle-double-up text-success" /> : <i className="fas fa-fa-angle-double-down text-danger" /> }</td>
                 </tr>
             </tbody>
         </table>

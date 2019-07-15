@@ -1,10 +1,27 @@
+/* eslint-disable*/
 import React from 'react';
+import axios from 'axios';
 import { connect } from "react-redux";
-import { fetchData, calculateChange } from '../../actions/actions';
+import { putDataInStore, calculateChange } from '../../actions/actions';
 import PriceTable from '../priceTable/priceTable';
 import './display.scss';
 
-const display = () => {
+class Display extends React.Component {
+    
+    componentDidMount() {
+        // ===== Making API CALL =====        
+        axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
+        .then((resp) => {
+            this.props.putDataInStore(resp.data.bpi);
+            console.log(this.props.apiResult);
+        })
+        .catch(() => {});
+    }
+
+
+
+    render() {
+        
     return (
         <div className="container">
             <div className="row">
@@ -24,16 +41,17 @@ const display = () => {
             </div>
         </div>
     );
-};
-
+}
+}
 // Will get the state data and associate actions here and pass them as a props to priceTable component
-const mapStateToProps = state => ({
-    ...state
-  });
-  
-  const mapDispatchToProps = dispatch => ({
-    fetchData: () => dispatch(fetchData),
-    calculateChange: () => dispatch(calculateChange)
-  });
+const mapStateToProps = (state) => {
+    return { apiResult: state.apiResult };
+   };
+   
+   const mapDispatchToProps = dispatch => ({
+     putDataInStore: (data) => dispatch(putDataInStore({data})),
+     calculateChange: () => dispatch(calculateChange)
+   });
 
-export default connect(mapStateToProps, mapDispatchToProps)(display);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Display);

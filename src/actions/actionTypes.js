@@ -1,2 +1,2 @@
-export const FETCH_DATA = 'FETCH_DATA';
+export const PUT_DATA_IN_STORE = 'PUT_DATA_IN_STORE';
 export const CALCULATE_CHANGE = 'CALCULATE_CHANGE';
