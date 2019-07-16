@@ -10,19 +10,13 @@ const rootReducer = (state = initialState, action) => {
         case 'PUT_DATA_IN_STORE': // 1. CHECK THE INCOMING ACTION WITH THE ACTION NAME AND MAKE STATE CHANGES
             // console.log(`[In Reducer]: PUT DATA action called`);
             return {
+                // 1.ADDING NEW RESULT TO OUR STATE ARRAY IMMUTABLY(concat).
                 ...state,
-                apiResult: state.apiResult.concat(state.apiResult.splice(0, 0, action.payload)) // ADDING NEW RESULT TO OUR STATE ARRAY IMMUTABLY(concat).
-            };
+                apiResult: state.apiResult.concat(state.apiResult.splice(0, 0, action.payload)), 
 
-        case 'CALCULATE_CHANGE':
-            // 2. To calculate change whether +ve or -ve
-            console.log(`[In Reducer]: CALCULATE DATA action called`);
-            return {
-                ...state,
-                change: 99,
-                isPositive: false
+                // 2. Calculate the relative change %
+                change: (((state.apiResult[0].data.USD.rate_float - state.apiResult[1].data.USD.rate_float) / state.apiResult[0].data.USD.rate_float) * 100).toFixed(4)
             };
-
         default:
             // console.log(state);
             return state;

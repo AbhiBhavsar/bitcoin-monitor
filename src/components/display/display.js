@@ -15,7 +15,6 @@ class Display extends React.Component {
         axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
             .then((resp) => {
                 this.props.putDataInStore(resp.data.bpi);
-                this.props.calculateChange();
                 // console.log(this.props.apiResult);
             })
             .catch(() => { });
@@ -56,8 +55,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    putDataInStore: (data) => { dispatch(putDataInStore({ data })); },
-    calculateChange: () => dispatch(calculateChange())
+    putDataInStore: (data) => { dispatch(putDataInStore({ data })); }
 });
 
 
