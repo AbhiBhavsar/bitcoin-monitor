@@ -1,6 +1,7 @@
 import { PUT_DATA_IN_STORE, CALCULATE_CHANGE } from './actionTypes';
 
- export const putDataInStore = (payload) => {
+// 1. FOR EACH UNIQUE ACTION NAME below are associate ACTION CREATORs 
+export const putDataInStore = (payload) => {
     return {
         type: PUT_DATA_IN_STORE,
         payload

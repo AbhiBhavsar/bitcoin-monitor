@@ -5,6 +5,7 @@ const priceTable = (props) => {
     const iconStyle = {
         transform: 'rotate(90deg)'
     };
+
     return (
         
         <table className="table text-center">
@@ -29,13 +30,15 @@ const priceTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    {/* ===== will use map to render the rows =====  */}
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>0</td>
-                    <td>{ true ? <i className="fas fa-angle-double-up text-success" /> : <i className="fas fa-fa-angle-double-down text-danger" /> }</td>
+                 {/* ===== will use map to render the rows =====  */}
+                 {props.apiResult.length > 0 && props.apiResult.map((item, key, origArr) => (
+                <tr key={`row__${key}`}>
+                    <td>{item.data.USD.rate}</td>
+                    <td>{item.data.GBP.rate}</td>
+                    <td>{item.data.EUR.rate}</td>
+                     {/* <td>{origArr.USD.rate[origArr.length-1] > origArr.data.USD.rate[origArr.length-2] ? <i className="fas fa-angle-double-up text-success" /> : <i className="fas fa-fa-angle-double-down text-danger" /> }</td> */}
                 </tr>
+                ))}
             </tbody>
         </table>
     );

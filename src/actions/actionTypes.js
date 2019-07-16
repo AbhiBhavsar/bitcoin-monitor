@@ -1,2 +1,3 @@
+// 1. UNIQUE ACTION NAMES used by reducers.
 export const PUT_DATA_IN_STORE = 'PUT_DATA_IN_STORE';
 export const CALCULATE_CHANGE = 'CALCULATE_CHANGE';
