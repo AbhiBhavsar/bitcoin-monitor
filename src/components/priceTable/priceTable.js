@@ -35,9 +35,9 @@ const priceTable = (props) => {
                         <td>{item.data.USD.rate}</td>
                         <td>{item.data.GBP.rate}</td>
                         <td>{item.data.EUR.rate}</td>
-                        <td>{props.change > 0 ? <span className="text-success">{`${props.change}%`} <i className="fas fa-angle-double-up" /> </span> :
-                             props.change === 0? <span className="text-default">{`${props.change}%`}</span> :
-                             <span className="text-danger">{`${props.change}%`} <i className="fas fa-angle-double-down" /></span>}</td>
+                        <td>{props.change > 0 ? <span className="text-success">{`${props.change.toFixed(4)}%`} <i className="fas fa-angle-double-up" /> </span> :
+                             props.change === 0? <span className="text-default">{`${props.change.toFixed(4)}%`}</span> :
+                             <span className="text-danger">{`${props.change.toFixed(4)}%`} <i className="fas fa-angle-double-down" /></span>}</td>
                     </tr>
                 ))}
             </tbody>

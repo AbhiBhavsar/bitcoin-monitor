@@ -15,7 +15,7 @@ const rootReducer = (state = initialState, action) => {
                 apiResult: state.apiResult.concat(state.apiResult.splice(0, 0, action.payload)), 
 
                 // 2. Calculate the relative change %
-                change: (((state.apiResult[0].data.USD.rate_float - state.apiResult[1].data.USD.rate_float) / state.apiResult[0].data.USD.rate_float) * 100).toFixed(4)
+                change: (((state.apiResult[0].data.USD.rate_float - state.apiResult[1].data.USD.rate_float) / state.apiResult[0].data.USD.rate_float) * 100)
             };
         default:
             // console.log(state);
