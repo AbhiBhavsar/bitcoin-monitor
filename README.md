@@ -17,18 +17,15 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-1. $npm i or $npm install
-Give the example
-```
+1. Get the dependencies with
+    `$npm i` or `$npm install`
 
-And repeat
+2. For running in webpack dev server
+    `$ npm start `
 
-```
-until finished
-```
+3. For build
+    `$ npm build`
 
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -56,9 +53,8 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [React/ Redux](https://reactjs.org/)(https://redux.js.org/) - The web framework used
+* [Coindesk api](https://api.coindesk.com/v1/bpi/currentprice.json) - Dependency Management
 
 ## Contributing
 
@@ -70,7 +66,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Abhishek Bhavsar**
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
