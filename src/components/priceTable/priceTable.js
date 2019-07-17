@@ -6,15 +6,16 @@ const priceTable = (props) => {
   const iconStyle = {
     transform: 'rotate(90deg)'
   };
+  const { change, usdRate, gbpRate, eurRate } = props;
   return (
     <div className="row">
       <div className="col-sm-3">
         <div className="card">
           <h5 className="card-header">USD</h5>
           <div className="card-body">
-            {props.usdRate ?
+            {usdRate ?
               <h6 className="card-title">
-                {props.usdRate}</h6> :
+                {usdRate}</h6> :
               <Loading />
             }
           </div>
@@ -25,8 +26,8 @@ const priceTable = (props) => {
         <div className="card">
           <h5 className="card-header">GBP</h5>
           <div className="card-body">
-            {props.usdRate ?
-              <h6 className="card-title">{props.gbpRate}</h6> :
+            {usdRate ?
+              <h6 className="card-title">{gbpRate}</h6> :
               <Loading />}
           </div>
         </div>
@@ -36,8 +37,8 @@ const priceTable = (props) => {
         <div className="card">
           <h5 className="card-header">EUR</h5>
           <div className="card-body">
-            {props.usdRate ?
-              <h6 className="card-title">{props.eurRate}</h6> :
+            {usdRate ?
+              <h6 className="card-title">{eurRate}</h6> :
               <Loading />}
           </div>
         </div>
@@ -48,9 +49,9 @@ const priceTable = (props) => {
           <h5 className="card-header">Change <span> <i className="fas fa-exchange-alt" style={iconStyle} /></span></h5>
           <div className="card-body">
             <h6 className="card-title">
-              {props.change > 0 ? <span className="text-success">{`${props.change.toFixed(4)}%`} <i className="fas fa-angle-double-up" /> </span> :
-                props.change === 0 ? <span className="text-default">{`${props.change.toFixed(4)}%`}</span> :
-                  <span className="text-danger">{`${props.change.toFixed(4)}%`} <i className="fas fa-angle-double-down" /></span>}
+              {props.change > 0 ? <span className="text-success">{`${change.toFixed(4)}%`} <i className="fas fa-angle-double-up" /> </span> :
+                props.change === 0 ? <span className="text-default">{`${change.toFixed(4)}%`}</span> :
+                  <span className="text-danger">{`${change.toFixed(4)}%`} <i className="fas fa-angle-double-down" /></span>}
             </h6>
           </div>
         </div>
