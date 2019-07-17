@@ -24,6 +24,7 @@ class Display extends React.Component {
     };
 
     render() {
+        const { apiResult, change, usdRate, gbpRate, eurRate,lastUpdated } = this.props;
         let updateTime = new Date(`${this.props.lastUpdated}`).toString();
         return (
             <div className="container">
@@ -40,14 +41,14 @@ class Display extends React.Component {
                     {/* ====== For Displaying Price table ===== */}
                     <div className="col-lg-9">
                         <PriceTable
-                            apiResult={this.props.apiResult}
-                            change={this.props.change}
-                            usdRate={this.props.usdRate}
-                            gbpRate={this.props.gbpRate}
-                            eurRate={this.props.eurRate}
+                            apiResult={apiResult}
+                            change={change}
+                            usdRate={usdRate}
+                            gbpRate={gbpRate}
+                            eurRate={eurRate}
                         />
                         <div className="card bg-default mt-3">
-                            <div className="card-body">Last Updated: {this.props.lastUpdated ? updateTime : <Loading />}</div>
+                            <div className="card-body">Last Updated: {lastUpdated ? updateTime : <Loading />}</div>
                         </div>
                     </div>
                 </div>
