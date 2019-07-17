@@ -1,6 +1,6 @@
 # Bitcoin Monitor
 
-Simple Bitcoin rate tracker app with Babel, Redux, Webpack, Sass, & Bootstrap.
+Simple Bitcoin rate tracker app with React, Redux, Babel, Webpack, Sass, & Bootstrap.
 Also enabled with ES Lint.
 
 ## Getting Started
@@ -18,10 +18,7 @@ Give examples
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
+1. $npm i or $npm install
 Give the example
 ```
 
