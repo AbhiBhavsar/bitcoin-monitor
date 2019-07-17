@@ -27,7 +27,7 @@ class Display extends React.Component {
         let updateTime = new Date(`${this.props.lastUpdated}`).toString();
         return (
             <div className="container">
-                <div className="row">
+                <div className="row mt-5">
                     {/* ====== For Displaying 1B ===== */}
                     <div className="col-lg-2">
                         <p>
